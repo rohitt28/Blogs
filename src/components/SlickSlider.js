@@ -86,6 +86,11 @@ const SlickSlider = () => {
   
   var finalTagsArray = TagsYAML.tagslist
 
+  const renderFallbackImg = (e) => {
+    // Will replace broken image
+    e.target.src = "https://via.placeholder.com/200?text=."
+  }
+
   return (
     <Fragment>
       <div className="categoryHeader">Categories</div>
@@ -103,6 +108,7 @@ const SlickSlider = () => {
                   src={tag.icon}
                   alt={tag.name}
                   className="categoryImg"
+                  onError={renderFallbackImg}
                 ></CardImg>
               </div>
             ))}
