@@ -20,6 +20,7 @@ class BlogRoll extends React.Component {
                 backgroundColor: "white",
                 boxShadow: "0px 7px 15px #b1b1b1",
                 position: "relative",
+                borderRadius:"2%"
               }}
               key={post.id}
             >
@@ -36,11 +37,13 @@ class BlogRoll extends React.Component {
                       alt={post.frontmatter.title}
                       style={{
                         width: "100%",
+                        borderTopLeftRadius:"2%",
+                        borderTopRightRadius:"2%"
                       }}
                     />
                   </div>
                 ) : null}
-                <CardTitle style={{ padding: "1em", fontSize: "1.4em" }}>
+                <CardTitle style={{ padding: "5%", fontSize: "1.4em" }}>
                   <Link className="title" to={post.fields.slug}>
                     <span
                       style={{

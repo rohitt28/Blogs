@@ -35,10 +35,11 @@ const TopPosts = ({ data }) => {
   const max = 3;
 
   return (
-    <Container>
-      <div className="header">Top Posts</div>
+    <Container >
+     <Container style={{width:"100%"}}>
+     <div className="header">Top Posts</div>
       <div className="underline"></div>
-      <div className="scroll-cards">
+      <div className="scroll-cards" >
         {data.edges
           .filter((e) => e.node.frontmatter.templateKey === "blog-post")
           .map((e) => (
@@ -97,6 +98,7 @@ const TopPosts = ({ data }) => {
           ))}
       </div>
       <hr />
+     </Container>
     </Container>
   );
 };
