@@ -1,0 +1,63 @@
+@import './variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    scroll-behaviour: smooth
+
+body
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif
+    font-size: 16px !important
+    background-color: #f0f0f0
+    overflow-x: hidden !important
+    scroll-snap-type: y
+
+.hover-underline
+    text-decoration: none
+    color: $semi-black
+    &:hover
+        color: black
+        text-decoration: underline $green
+
+.cleanse
+    padding: 0 8% 0 8%
+
+.background-blue
+    background-color: $blue !important
+
+.white
+    color: white !important
+
+.cover
+    // position: relative
+    // padding: 0 8% 0 8%
+    // background-size: cover
+    width: 100%
+    // background: linear-gradient(to bottom, #34e89e,#52c2a4,#061700)
+    background: linear-gradient(to bottom, #34e87f,#22e097,#061700)
+
+    
+.bg-texture-about
+    z-index: -1 !important
+    height: auto
+    width: 100%
+    padding: 0 8% 0 8%
+    left: 0px
+    background: linear-gradient(to bottom,#061700,#061700,#000)
+    position: absolute
+    margin: 0 !important
+
+@media (max-width: $breakpoint-tablet) 
+    body
+        font-size: 12px !important
+    .bg-texture-about
+        padding-top: 15px
+        padding-bottom: 0
+    
+@media (max-width: $breakpoint-large)
+    .bg-texture-about
+        padding-bottom: 85px
+    // background: linear-gradient(to bottom, #34e89e,#52c2a4,#061700,#061700,#000)
+        // position: absolute
+        
